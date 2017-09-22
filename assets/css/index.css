@@ -1,0 +1,435 @@
+body > section{
+	display: flex;
+	height: 100%;
+}
+body > section > .container,
+body > section > .container-full{
+	height: 100%;
+}
+
+body > section header{
+	text-align: center;
+}
+body > section header > h2{
+	font-size: 2em;
+}
+
+.sub-page header{
+	margin: 4em 0 3em 0;
+}
+.sub-page header h2{
+	margin-bottom: 1.5em;
+}
+
+#home{
+	background: linear-gradient(0deg, #e2e2e2, #fff 50%);
+}
+#home > .container{
+	width: 100%;
+	max-width: 1024px;
+	background: url("../img/index/team.png") no-repeat bottom center fixed;
+	background-size: auto 50%;
+}
+#home header{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 50%;
+	padding-top: 2%;
+}
+#home h1{
+	font-size: 1em;
+}
+#home h1 a{
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+}
+#home h1 a:hover{
+	text-decoration: none;
+}
+#home h1 a img{
+	width: 100%;
+}
+#home h1 a span{
+	display: block;
+	margin-top: .5em;
+	text-align: justify;
+}
+#home h1 a span:after{
+	content: "";
+	display: inline-block;
+	padding-left: 100%;
+}
+#home header p{
+	margin: 0;
+}
+#home .sub-title{
+	color: #aaa;
+}
+#home .button-line a{
+	display: inline-block;
+	padding: .5em 2em;
+	background: #505050;
+	color: rgba(255, 255, 255, .75);
+	transition: color .3s ease;
+}
+#home .button-line a:hover{
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+
+#service{
+	background: url("../img/index/bg-triangle-grid.jpg") center;
+	color: rgba(255, 255, 255, .85);
+}
+#service > .container > ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#service > .container > ul > li{
+	box-sizing: content-box;
+	list-style: none;
+	float: left;
+	position: relative;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 11.6%;
+	background: rgba(255, 255, 255, .1);
+	transition: all .3s ease;
+}
+#service > .container > ul > li:not(:last-child) {
+	margin-right: 2.4%;
+}
+#service > .container > ul > li > *{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+#service > .container > ul > li > div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	transition: height .3s ease;
+}
+#service > .container > ul > li > div > span{
+	display: flex;
+	align-items: center;
+	height: 5em;
+	transition: transform .3s ease;
+}
+#service > .container > ul > li h3{
+	margin: 2em 0 0 0;
+	font-size: 1em;
+	transition: all .3s ease;
+}
+#service > .container > ul > li i.fa{
+	font-size: 5em;
+}
+#service > .container > ul > li i.fa-wechat{
+	font-size: 3em;
+}
+#service > .container > ul > li i.fa-server{
+	font-size: 4em;
+}
+#service > .container > ul > li > article{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: 100%;
+	height: 75%;
+	padding: 2em;
+	text-align: center;
+	transition: top .3s ease;
+}
+#service > .container > ul > li > article p{
+	margin: .5em 0;
+	font-size: 1.15em;
+}
+#service > .container > ul > li.desktop:hover{
+	background: #19b8ec;
+}
+#service > .container > ul > li.mobile:hover{
+	background: #cc3;
+}
+#service > .container > ul > li.wechat:hover{
+	background: #3cab57;
+}
+#service > .container > ul > li.server:hover{
+	background: #000;
+}
+#service > .container > ul > li:hover{
+	color: #fff;
+}
+#service > .container > ul > li:hover > div{
+	height: 25%;
+}
+#service > .container > ul > li:hover > div > span{
+	transform: scale(0, 0);
+}
+#service > .container > ul > li:hover h3{
+	margin-top: 0;
+	font-size: 1.6em;
+}
+#service > .container > ul > li:hover > article{
+	top: 20%;
+}
+#service > .container > footer{
+	margin-top: 3em;
+	text-align: center;
+}
+#service > .container > footer p{
+	margin: 0 0 1.5em 0;
+}
+#service > .container > footer ul{
+	display: flex;
+	justify-content: center;
+}
+#service > .container > footer li{
+	list-style: none;
+	position: relative;
+	width: 6em;
+	height: 4em;
+	overflow: hidden;
+	line-height: 1em;
+	text-align: center;
+}
+#service > .container > footer i.fa{
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 2em;
+	transition: color .3s ease;
+}
+#service > .container > footer span{
+	display: block;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	opacity: 0;
+	text-align: center;
+	font-size: 80%;
+	transition: all .3s ease;
+}
+#service > .container > footer li:hover span{
+	top: 3em;
+	opacity: 1;
+}
+#service > .container > footer li.data-visualization:hover,
+#service > .container > footer li.data-visualization:hover i.fa{
+	color: #dddb3e;
+}
+#service > .container > footer li.mis:hover,
+#service > .container > footer li.mis:hover i.fa{
+	color: #1eb2ff;
+}
+#service > .container > footer li.cms:hover,
+#service > .container > footer li.cms:hover i.fa{
+	color: #58df64;
+}
+#service > .container > footer li.ecommerce:hover,
+#service > .container > footer li.ecommerce:hover i.fa{
+	color: #ef4e1d;
+}
+#service > .container > footer li.online-paying:hover,
+#service > .container > footer li.online-paying:hover i.fa{
+	color: #c37d0f;
+}
+#service > .container > footer li.more:hover,
+#service > .container > footer li.more:hover i.fa{
+	color: #fff;
+}
+
+#collaboration{
+	background: url("../img/index/bg-collaboration.jpg") no-repeat center fixed;
+	background-size: cover;
+	color: rgba(255, 255, 255, .85);
+}
+
+#showcases{
+	flex-direction: column;
+	min-height: 100%;
+	height: auto;
+}
+#showcases .numbers-list ul{
+	display: flex;
+	width: 100%;
+}
+#showcases .numbers-list li{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+}
+#showcases .numbers-list li:not(:last-child){
+	border-right: 1px solid #eee;
+}
+#showcases .numbers-list em{
+	position: relative;
+	font-style: normal;
+	font-size: 4em;
+}
+#showcases .numbers-list sub{
+	position: absolute;
+	bottom: .7em;
+	margin-left: .2em;
+	font-size: 50%;
+	line-height: 1;
+}
+#showcases .cases-list{
+	margin-top: 5em;
+	padding: 5em 0;
+	background: #505050;
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+#showcases .cases-list ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#showcases .cases-list li{
+	box-sizing: content-box;
+	list-style: none;
+	float: left;
+	position: relative;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 7.8125% 12.5%;
+}
+#showcases .cases-list figure{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	transition: background-size .5s linear;
+}
+#showcases .cases-list figcaption{
+	display: none;
+}
+#showcases .cases-list li div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.8);
+}
+#showcases .cases-list li figure + div{
+	display: none;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+#showcases .cases-list li div img{
+	max-height: 30%;
+	margin-bottom: 1em;
+}
+#showcases .cases-list li div i.fa{
+	font-size: 4em;
+}
+#showcases .cases-list li div h4 a{
+	color: rgba(255, 255, 255, 0.8);
+}
+#showcases .cases-list li div h4 a:hover{
+	color: #fff;
+}
+#showcases .cases-list li div p{
+	margin: .5em 0;
+}
+#showcases .cases-list li div p span{
+	padding: .2em .5em;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.8);
+	font-size: 75%;
+	color: #505050;
+}
+#showcases .cases-list li div p span:not(:last-child){
+	margin-right: .5em;
+}
+#showcases .cases-list li:last-child a{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#showcases .cases-list li:last-child a:hover div{
+	color: #fff;
+}
+#showcases .cases-list li:hover div{
+	display: flex;
+}
+#showcases .cases-list li:hover figure{
+	background-size: 120%;
+}
+#showcases .cases-list li:hover figure + div:hover{
+	opacity: 1;
+}
+
+#showcases .customers{
+	display: none;
+}
+
+#contact{
+	background: url(../img/index/bg-contact.png) no-repeat center;
+	background-size: cover;
+}
+#contact form{
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: auto;
+}
+#contact form p{
+	margin: 0 0 1em 0;
+}
+#contact form input,
+#contact form textarea,
+#contact form button{
+	width: 100%;
+	padding: .5em;
+	border-radius: .2em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transition: box-shadow .3s ease;
+}
+#contact form input,
+#contact form textarea{
+	border: 1px solid #ccc;
+}
+#contact form textarea{
+	height: 16em;
+	vertical-align: middle;
+}
+#contact form button[type="submit"]{
+	border: none;
+	background: #8ec652;
+	color: #fff;
+}
+
+#contact form input:hover,
+#contact form textarea:hover,
+#contact form button:hover{
+	box-shadow: 0 1px .5em rgba(0, 0, 0, .2);
+}
+#contact form input::placeholder{
+	text-align: center;
+	color: #ccc;
+}

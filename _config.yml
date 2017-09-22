@@ -1,0 +1,6 @@
+markdown: kramdown
+permalink: /:categories/:month-:day-:year/:title
+exclude:
+  - README.md
+
+cdn: "/assets"

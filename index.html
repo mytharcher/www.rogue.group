@@ -1,0 +1,205 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+<title>诺格信息技术 | ROGUE Information Technology</title>
+<meta charset="utf-8" />
+<meta name="author" content="{{ site.meta.author.name }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="{{ site.cdn }}/css/common.css" />
+<link rel="stylesheet" href="{{ site.cdn }}/css/index.css" />
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+<section id="home">
+	<div class="container">
+		<header>
+			<h1>
+				<a href="/">
+					<img src="{{ site.cdn }}/img/logo.png" />
+					<span>诺格信息技术</span>
+				</a>
+			</h1>
+			<h2>做您专业靠谱的伙伴，用技术加速您的业务</h2>
+			<p class="sub-title">网站 / 移动应用 App / 微信公众号 / 定制开发专家</p>
+			<p class="button-line"><a href="#service">了解更多</a></p>
+		</header>
+	</div>
+</section>
+
+<section id="service" class="sub-page">
+	<div class="container">
+		<header>
+			<h2>我们的服务</h2>
+			<p>从端到端的全案式定制开发，量身为您的业务打造最适合的产品</p>
+		</header>
+		<ul>
+			<li class="desktop">
+				<div>
+					<span><i class="fa fa-desktop"></i></span>
+					<h3>网站</h3>
+				</div>
+				<article>
+					<p>企业官网</p>
+					<p>管理后台</p>
+				</article>
+			</li>
+			<li class="mobile">
+				<div>
+					<span><i class="fa fa-mobile"></i></span>
+					<h3>移动应用</h3>
+				</div>
+				<article>
+					<p>网页 ( HTML 5 )</p>
+					<p>混合 ( Hybird )</p>
+					<p>原生 ( Native )</p>
+				</article>
+			</li>
+			<li class="wechat">
+				<div>
+					<span><i class="fa fa-wechat"></i></span>
+					<h3>微信</h3>
+				</div>
+				<article>
+					<p>公众号开发</p>
+					<p>微信支付</p>
+					<p>小程序</p>
+				</article>
+			</li>
+			<li class="server">
+				<div>
+					<span><i class="fa fa-server"></i></span>
+					<h3>服务运维</h3>
+				</div>
+				<article>
+					<p>云服务托管</p>
+					<p>监控告警</p>
+					<p>故障处理</p>
+				</article>
+			</li>
+		</ul>
+		<footer>
+			<p>坚实的技术基础之上，我们一专多能，更有众多业务场景的丰富经验</p>
+			<ul>
+				<li class="data-visualization">
+					<i class="fa fa-pie-chart"></i>
+					<span>数据可视化</span>
+				</li>
+				<li class="mis">
+					<i class="fa fa-table"></i>
+					<span>管理信息系统</span>
+				</li>
+				<li class="cms">
+					<i class="fa fa-image"></i>
+					<span>内容管理系统</span>
+				</li>
+				<li class="ecommerce">
+					<i class="fa fa-shopping-cart"></i>
+					<span>电子商务</span>
+				</li>
+				<li class="online-paying">
+					<i class="fa fa-exchange"></i>
+					<span>在线支付</span>
+				</li>
+				<li class="more">
+					<i class="fa fa-ellipsis-h"></i>
+					<span>更多</span>
+				</li>
+			</ul>
+		</footer>
+	</div>
+</section>
+
+<section id="collaboration" class="sub-page">
+	<div class="container">
+		<header>
+			<h2>全流程协作</h2>
+			<p>一线互联网标准流程，敏捷迭代，配合协作工具及时反馈，确保产出与初心一致</p>
+		</header>
+		<figure></figure>
+	</div>
+</section>
+
+<section id="showcases" class="sub-page">
+	<div class="container numbers-list">
+		<header>
+			<h2>案例</h2>
+			<p>自豪地向您展示我们的业绩，以及近期的作品</p>
+		</header>
+		<ul>
+			<li>
+				<em>10<sub>yrs</sub></em>
+				<span>行业经验</span>
+			</li>
+			<li>
+				<em>110</em>
+				<span>项目交付</span>
+			</li>
+			<li>
+				<em>62</em>
+				<span>服务客户</span>
+			</li>
+			<li>
+				<em>95<sub>%</sub></em>
+				<span>满意度</span>
+			</li>
+		</ul>
+	</div>
+	<div class="container-full cases-list">
+		<div class="container">
+			<ul>
+				{% for case in site.categories.cases reversed limit:11 %}
+				{% if case.featured %}
+				<li>
+					<figure style="background-image: url({{ site.cdn }}/img/cases/{{ case.key }}-640.jpg);">
+						<figcaption>{{ case.title }}</figcaption>
+					</figure>
+					<div>
+						<img src="{{ site.cdn }}/img/cases/{{ case.key }}-logo.png" />
+						<h4>{{ case.title }}</h4>
+						<p>{% for tag in case.tags %}<span>{{ tag }}</span>{% endfor %}</p>
+					</div>
+				</li>
+				{% endif %}
+				{% endfor %}
+				<li>
+					<a href="#contact">
+						<div>
+							<i class="fa fa-plus"></i>
+							<h4></h4>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container customers">
+		<header>
+			<h2>客户评价</h2>
+		</header>
+	</div>
+</section>
+
+<section id="contact" class="sub-page">
+	<div class="container">
+		<header>
+			<h2>联系我们</h2>
+			<p>一封邮件让我们成为您的技术合作伙伴</p>
+		</header>
+		<form action="//formspree.io/contact@rogue.group" method="POST">
+			<fieldset>
+				<input type="hidden" name="_language" value="zh-CN" />
+			</fieldset>
+			<p><input type="email" name="email" placeholder="email@domain.com" required /></p>
+			<p><textarea name="message" required></textarea></p>
+			<p><button type="submit">提交</button></p>
+		</form>
+	</div>
+</section>
+</body>
+</html>
