@@ -51,7 +51,14 @@ img{
 }
 
 a{
+	color: #505050;
 	text-decoration: none;
+}
+a:hover{
+	color: #000;
+}
+a[href^="mailto:"]:hover{
+	text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -97,7 +104,15 @@ fieldset{
 	}
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+	.container{
+		width: 100%;
+		min-width: auto;
+		padding: 0 1em;
+	}
+}
+
+@media (max-width: 640px) {
 	body{
 		font-size: 12px;
 	}

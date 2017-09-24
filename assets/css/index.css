@@ -1,10 +1,8 @@
 body > section{
-	display: flex;
-	height: 100%;
 }
 body > section > .container,
 body > section > .container-full{
-	height: 100%;
+	min-height: 100%;
 }
 
 body > section header{
@@ -14,20 +12,30 @@ body > section header > h2{
 	font-size: 2em;
 }
 
+.sub-page{
+	height: auto;
+	min-height: 100%;
+}
 .sub-page header{
-	margin: 4em 0 3em 0;
+	padding: 4em 0 3em 0;
 }
 .sub-page header h2{
 	margin-bottom: 1.5em;
 }
+.sub-page header p{
+	margin: 0;
+}
 
 #home{
+	display: flex;
+	height: 100%;
 	background: linear-gradient(0deg, #e2e2e2, #fff 50%);
 }
 #home > .container{
 	width: 100%;
+	height: 100%;
 	max-width: 1024px;
-	background: url("../img/index/team.png") no-repeat bottom center fixed;
+	background: url("../img/index/team.png") no-repeat bottom center;
 	background-size: auto 50%;
 }
 #home header{
@@ -62,7 +70,10 @@ body > section header > h2{
 	display: inline-block;
 	padding-left: 100%;
 }
-#home header p{
+#home h2{
+	display: flex;
+}
+#home p{
 	margin: 0;
 }
 #home .sub-title{
@@ -101,8 +112,10 @@ body > section header > h2{
 	background: rgba(255, 255, 255, .1);
 	transition: all .3s ease;
 }
-#service > .container > ul > li:not(:last-child) {
-	margin-right: 2.4%;
+@media (min-width: 1024px) {
+	#service > .container > ul > li:not(:nth-child(4n)) {
+		margin-right: 2.4%;
+	}
 }
 #service > .container > ul > li > *{
 	position: absolute;
@@ -150,7 +163,7 @@ body > section header > h2{
 	transition: top .3s ease;
 }
 #service > .container > ul > li > article p{
-	margin: .5em 0;
+	margin: .25em 0;
 	font-size: 1.15em;
 }
 #service > .container > ul > li.desktop:hover{
@@ -196,14 +209,14 @@ body > section header > h2{
 	list-style: none;
 	position: relative;
 	width: 6em;
-	height: 4em;
+	height: 6em;
 	overflow: hidden;
 	line-height: 1em;
 	text-align: center;
 }
 #service > .container > footer i.fa{
-	color: rgba(255, 255, 255, 0.5);
 	font-size: 2em;
+	color: rgba(255, 255, 255, 0.5);
 	transition: color .3s ease;
 }
 #service > .container > footer span{
@@ -216,39 +229,80 @@ body > section header > h2{
 	font-size: 80%;
 	transition: all .3s ease;
 }
+#service > .container > footer li:hover i.fa{
+	color: #fff;
+}
 #service > .container > footer li:hover span{
 	top: 3em;
 	opacity: 1;
 }
-#service > .container > footer li.data-visualization:hover,
-#service > .container > footer li.data-visualization:hover i.fa{
-	color: #dddb3e;
-}
-#service > .container > footer li.mis:hover,
-#service > .container > footer li.mis:hover i.fa{
-	color: #1eb2ff;
-}
-#service > .container > footer li.cms:hover,
-#service > .container > footer li.cms:hover i.fa{
-	color: #58df64;
-}
-#service > .container > footer li.ecommerce:hover,
-#service > .container > footer li.ecommerce:hover i.fa{
-	color: #ef4e1d;
-}
-#service > .container > footer li.online-paying:hover,
-#service > .container > footer li.online-paying:hover i.fa{
-	color: #c37d0f;
-}
-#service > .container > footer li.more:hover,
-#service > .container > footer li.more:hover i.fa{
-	color: #fff;
-}
+// #service > .container > footer li.data-visualization:hover,
+// #service > .container > footer li.data-visualization:hover i.fa{
+// 	color: #dddb3e;
+// }
+// #service > .container > footer li.mis:hover,
+// #service > .container > footer li.mis:hover i.fa{
+// 	color: #1eb2ff;
+// }
+// #service > .container > footer li.cms:hover,
+// #service > .container > footer li.cms:hover i.fa{
+// 	color: #58df64;
+// }
+// #service > .container > footer li.ecommerce:hover,
+// #service > .container > footer li.ecommerce:hover i.fa{
+// 	color: #ef4e1d;
+// }
+// #service > .container > footer li.online-paying:hover,
+// #service > .container > footer li.online-paying:hover i.fa{
+// 	color: #c37d0f;
+// }
+// #service > .container > footer li.more:hover,
+// #service > .container > footer li.more:hover i.fa{
+// 	color: #fff;
+// }
 
 #collaboration{
+	display: block;
+	min-height: 100%;
+	height: auto;
 	background: url("../img/index/bg-collaboration.jpg") no-repeat center fixed;
 	background-size: cover;
 	color: rgba(255, 255, 255, .85);
+}
+#collaboration .container{
+	min-width: auto;
+	max-width: 50%;
+}
+@media (min-width: 1440px) {
+	#collaboration .container{
+		max-width: 600px;
+	}
+}
+#collaboration figure{
+	box-sizing: content-box;
+	position: relative;
+	width: 0;
+	height: 0;
+	overflow: visible;
+	padding: 50%;
+}
+#collaboration figure svg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+#node-circle{
+	stroke: rgba(255,255,255,.5);
+	stroke-width: 2;
+	fill: rgba(255,255,255,.2);
+}
+#collaboration figure svg text{
+	text-anchor: middle;
+	font-size: 14px;
+	fill: rgba(255, 255, 255, .85);
 }
 
 #showcases{
@@ -267,8 +321,10 @@ body > section header > h2{
 	align-items: center;
 	width: 25%;
 }
-#showcases .numbers-list li:not(:last-child){
-	border-right: 1px solid #eee;
+@media (min-width: 1024px) {
+	#showcases .numbers-list li:not(:last-child){
+		border-right: 1px solid #eee;
+	}
 }
 #showcases .numbers-list em{
 	position: relative;
@@ -388,8 +444,14 @@ body > section header > h2{
 }
 
 #contact{
-	background: url(../img/index/bg-contact.png) no-repeat center;
-	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url(../img/index/bg-contact.png) repeat-x center;
+	background-size: auto 100%;
+}
+#contact > .container{
+	flex: 1;
 }
 #contact form{
 	display: flex;
@@ -399,6 +461,11 @@ body > section header > h2{
 }
 #contact form p{
 	margin: 0 0 1em 0;
+	text-align: center;
+}
+#contact form p.extra,
+#contact form p.extra a{
+	color: #999;
 }
 #contact form input,
 #contact form textarea,
@@ -412,11 +479,12 @@ body > section header > h2{
 }
 #contact form input,
 #contact form textarea{
-	border: 1px solid #ccc;
+	border: 1px solid #e0e0e0;
 }
 #contact form textarea{
 	height: 16em;
 	vertical-align: middle;
+	resize: none;
 }
 #contact form button[type="submit"]{
 	border: none;
@@ -432,4 +500,83 @@ body > section header > h2{
 #contact form input::placeholder{
 	text-align: center;
 	color: #ccc;
+}
+
+#contact > footer{
+	padding: 1em 0;
+	background: rgba(0, 0, 0, .6);
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 80%;
+	font-family: Arial sans-serif;
+}
+#contact > footer p{
+	margin: 0;
+	line-height: 2em;
+	text-align: center;
+}
+#contact > footer a{
+	color: rgba(255, 255, 255, 0.5);
+}
+#contact > footer a:hover{
+	color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1023px) {
+	#home > .container{
+		background-size: 100% auto;
+	}
+	#home header{
+		height: 60%;
+		padding-top: 10%;
+	}
+
+	#service > .container > ul > li{
+		padding: 24.5%;
+		margin-bottom: 2%;
+	}
+	#service > .container > ul > li:not(:nth-child(2n)) {
+		margin-right: 2%;
+	}
+
+	#showcases .numbers-list ul{
+		flex-wrap: wrap;
+	}
+	#showcases .numbers-list li{
+		width: 50%;
+		padding: 1em 0;
+	}
+	#showcases .numbers-list li:nth-child(2n+1){
+		border-right: 1px solid #eee;
+	}
+	#showcases .numbers-list li:nth-child(2) ~ li{
+		border-top: 1px solid #eee;
+	}
+	#showcases .cases-list{
+		box-shadow: none;
+		padding: 0;
+	}
+	#showcases .cases-list .container{
+		padding: 0;
+	}
+	#showcases .cases-list li{
+		padding: 15.625% 25%;
+	}
+}
+
+@media (min-width: 640px) and (max-width: 1023px){
+	#collaboration .container{
+		max-width: 75%;
+	}
+}
+
+@media (max-width: 640px) {
+	#home h2{
+		flex-direction: column;
+		margin-left: .5em;
+		text-align: left;
+	}
+
+	#collaboration .container{
+		max-width: 100%;
+	}
 }

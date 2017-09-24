@@ -5,7 +5,6 @@
 <head>
 <title>诺格信息技术 | ROGUE Information Technology</title>
 <meta charset="utf-8" />
-<meta name="author" content="{{ site.meta.author.name }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
@@ -25,7 +24,7 @@
 					<span>诺格信息技术</span>
 				</a>
 			</h1>
-			<h2>做您专业靠谱的伙伴，用技术加速您的业务</h2>
+			<h2><span>做您专业靠谱的伙伴，</span><span>用技术加速您的业务</span></h2>
 			<p class="sub-title">网站 / 移动应用 App / 微信公众号 / 定制开发专家</p>
 			<p class="button-line"><a href="#service">了解更多</a></p>
 		</header>
@@ -121,7 +120,63 @@
 			<h2>全流程协作</h2>
 			<p>一线互联网标准流程，敏捷迭代，配合协作工具及时反馈，确保产出与初心一致</p>
 		</header>
-		<figure></figure>
+		<figure>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500">
+				<defs>
+					<circle id="node-circle" r="50" />
+				</defs>
+				<circle
+					cx="50%"
+					cy="50%"
+					r="200"
+					stroke="rgba(255,255,255,.5)"
+					stroke-width="2"
+					stroke-dasharray="104.72"
+					stroke-dashoffset="52.36"
+					fill="transparent"
+				/>
+				<g transform="translate(250,50)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan x="0" dy="0">咨询 &amp;</tspan>
+						<tspan x="0" dy="1.2em">需求分析</tspan>
+					</text>
+				</g>
+				<g transform="translate(423.2,150)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan y=".5em">产品原型设计</tspan>
+					</text>
+				</g>
+				<g transform="translate(423.2,350)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan x="0" dy="0">交互 &amp;</tspan>
+						<tspan x="0" dy="1.2em">视觉设计</tspan>
+					</text>
+				</g>
+				<g transform="translate(250,450)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan x="0" dy="0">功能开发</tspan>
+						<tspan x="0" dy="1.2em">&amp; 调试</tspan>
+					</text>
+				</g>
+				<g transform="translate(76.8,350)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan x="0" dy="0">测试 &amp;</tspan>
+						<tspan x="0" dy="1.2em">修复</tspan>
+					</text>
+				</g>
+				<g transform="translate(76.8,150)">
+					<use xlink:href="#node-circle" />
+					<text>
+						<tspan y=".5em">上线运维</tspan>
+					</text>
+				</g>
+			</svg>
+		</figure>
 	</div>
 </section>
 
@@ -171,7 +226,7 @@
 					<a href="#contact">
 						<div>
 							<i class="fa fa-plus"></i>
-							<h4></h4>
+							<h4>加入您的？</h4>
 						</div>
 					</a>
 				</li>
@@ -189,17 +244,25 @@
 	<div class="container">
 		<header>
 			<h2>联系我们</h2>
-			<p>一封邮件让我们成为您的技术合作伙伴</p>
+			<p>一个点击让我们成为您的技术合作伙伴</p>
 		</header>
 		<form action="//formspree.io/contact@rogue.group" method="POST">
 			<fieldset>
 				<input type="hidden" name="_language" value="zh-CN" />
 			</fieldset>
 			<p><input type="email" name="email" placeholder="email@domain.com" required /></p>
-			<p><textarea name="message" required></textarea></p>
+			<p><textarea name="message" required noresize></textarea></p>
 			<p><button type="submit">提交</button></p>
+			<p class="extra">或者给我们发送邮件：<a href="mailto:contact@rogue.group">contact@rogue.group</a></p>
 		</form>
 	</div>
+
+	<footer>
+		<div class="container">
+			<p>Our freedom worth the price.</p>
+			<p>&copy; Since 2017 <a href="http://www.rogue.group">rogue.group</a> all rights reserved.</p>
+		</div>
+	</footer>
 </section>
 </body>
 </html>
