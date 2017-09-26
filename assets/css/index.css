@@ -1,7 +1,5 @@
 body > section{
 	height: 100%;
-	min-height: 480px;
-	max-height: 1080px;
 }
 body > section > .container,
 body > section > .container-full{
@@ -288,7 +286,7 @@ body > section header > h2{
 }
 #collaboration .container{
 	min-width: auto;
-	max-width: 50%;
+	max-width: 40%;
 	padding-bottom: 3em;
 }
 #collaboration figure{
@@ -298,7 +296,7 @@ body > section header > h2{
 	height: 0;
 	overflow: visible;
 	margin: auto;
-	padding: 45%;
+	padding: 50%;
 }
 #collaboration figure svg{
 	position: absolute;
@@ -312,6 +310,10 @@ body > section header > h2{
 	stroke: rgba(255,255,255,.5);
 	stroke-width: 2;
 	fill: rgba(255,255,255,.2);
+	transition: fill .3s ease;
+}
+#node-circle:hover{
+	fill: rgba(0, 0, 0, .2);
 }
 #collaboration figure svg text{
 	text-anchor: middle;
@@ -353,10 +355,15 @@ body > section header > h2{
 	line-height: 1;
 }
 #showcases .cases-list{
-	margin-top: 5em;
-	padding: 5em 0;
-	background: #505050;
-	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+	margin-top: 3em;
+}
+@media (min-width: 1025px) {
+	#showcases .cases-list{
+		margin-top: 5em;
+		padding: 5em 0;
+		background: #505050;
+		box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+	}
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
 	#showcases .container{
@@ -542,17 +549,31 @@ body > section header > h2{
 }
 
 @media (min-width: 1440px) {
-	#collaboration .container{
-		max-width: 600px;
+	body > section{
+		max-height: initial;
 	}
-	#collaboration figure{
-		padding: 50%;
+}
+
+@media (max-width: 1439px) {
+	body > section{
+		min-height: 640px;
+		max-height: 960px;
+	}
+	#collaboration{
+		height: auto;
+	}
+}
+
+@media (max-width: 1280px) {
+	body > section{
+		max-height: 800px;
 	}
 }
 
 @media (max-width: 1023px) {
 	.sub-page{
 		height: auto;
+		max-height: initial;
 	}
 
 	#home > .container{
@@ -591,9 +612,6 @@ body > section header > h2{
 	#showcases .numbers-list li:nth-child(2) ~ li{
 		border-top: 1px solid #eee;
 	}
-	#showcases .cases-list{
-		padding: 0;
-	}
 	#showcases .cases-list .container{
 		padding: 0;
 	}
@@ -610,6 +628,9 @@ body > section header > h2{
 }
 
 @media (max-width: 640px) {
+	body > section{
+		min-height: 480px;
+	}
 	#home h2{
 		flex-direction: column;
 		margin-left: .5em;
@@ -617,7 +638,7 @@ body > section header > h2{
 	}
 
 	#collaboration .container{
-		max-width: 100%;
+		max-width: 480px;
 	}
 
 	#showcases .cases-list .container{
