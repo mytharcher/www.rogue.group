@@ -200,6 +200,7 @@ body > section header > h2{
 }
 #service > .container > ul > li:hover > div{
 	height: 25%;
+	overflow: visible;
 }
 #service > .container > ul > li:hover > div > span{
 	transform: scale(0, 0);
