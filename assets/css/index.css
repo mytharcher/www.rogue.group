@@ -1,4 +1,7 @@
 body > section{
+	height: 100%;
+	min-height: 480px;
+	max-height: 1080px;
 }
 body > section > .container,
 body > section > .container-full{
@@ -12,10 +15,6 @@ body > section header > h2{
 	font-size: 2em;
 }
 
-.sub-page{
-	height: auto;
-	min-height: 100%;
-}
 .sub-page header{
 	padding: 4em 0 3em 0;
 }
@@ -27,23 +26,27 @@ body > section header > h2{
 }
 
 #home{
-	display: flex;
-	height: 100%;
+	max-height: 1200px;
 	background: linear-gradient(0deg, #e2e2e2, #fff 50%);
 }
 #home > .container{
 	width: 100%;
-	height: 100%;
+	height: 50%;
+	min-height: auto;
 	max-width: 1024px;
+}
+#home > .container-full{
+	height: 50%;
+	min-height: auto;
 	background: url("../img/index/team.png") no-repeat bottom center;
-	background-size: auto 50%;
+	background-size: contain;
 }
 #home header{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 50%;
+	height: 100%;
 	padding-top: 2%;
 }
 #home h1{
@@ -279,8 +282,6 @@ body > section header > h2{
 
 #collaboration{
 	display: block;
-	min-height: 100%;
-	height: auto;
 	background: url("../img/index/bg-collaboration.jpg") no-repeat center fixed;
 	background-size: cover;
 	color: rgba(255, 255, 255, .85);
@@ -290,18 +291,14 @@ body > section header > h2{
 	max-width: 50%;
 	padding-bottom: 3em;
 }
-@media (min-width: 1440px) {
-	#collaboration .container{
-		max-width: 600px;
-	}
-}
 #collaboration figure{
 	box-sizing: content-box;
 	position: relative;
 	width: 0;
 	height: 0;
 	overflow: visible;
-	padding: 50%;
+	margin: auto;
+	padding: 45%;
 }
 #collaboration figure svg{
 	position: absolute;
@@ -324,8 +321,8 @@ body > section header > h2{
 
 #showcases{
 	flex-direction: column;
-	min-height: 100%;
 	height: auto;
+	max-height: inherit;
 }
 #showcases .numbers-list ul{
 	display: flex;
@@ -474,6 +471,7 @@ body > section header > h2{
 }
 #contact > .container{
 	flex: 1;
+	min-height: initial;
 }
 #contact form{
 	display: flex;
@@ -543,15 +541,35 @@ body > section header > h2{
 	color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 1023px) {
-	#home > .container{
-		background-size: 100% auto;
+@media (min-width: 1440px) {
+	#collaboration .container{
+		max-width: 600px;
 	}
-	#home header{
-		height: 60%;
-		padding-top: 10%;
+	#collaboration figure{
+		padding: 50%;
+	}
+}
+
+@media (max-width: 1023px) {
+	.sub-page{
+		height: auto;
 	}
 
+	#home > .container{
+		height: 60%;
+	}
+	#home > .container-full{
+		height: 40%;
+	}
+	@media (orientation: portrait){
+		#home header{
+			padding-top: 10%;
+		}
+	}
+
+	#service > .container{
+		max-width: 600px;
+	}
 	#service > .container > ul > li{
 		padding: 24.5%;
 		margin-bottom: 2%;
@@ -586,6 +604,7 @@ body > section header > h2{
 
 @media (min-width: 640px) and (max-width: 1023px){
 	#collaboration .container{
+		min-width: 600px;
 		max-width: 75%;
 	}
 }
