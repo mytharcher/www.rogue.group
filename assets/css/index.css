@@ -550,7 +550,7 @@ body > section header > h2{
 }
 
 @media (min-width: 1440px) {
-	body > section{
+	#collaboration{
 		min-height: 100%;
 		height: auto;
 	}
