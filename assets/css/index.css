@@ -551,7 +551,12 @@ body > section header > h2{
 
 @media (min-width: 1440px) {
 	body > section{
-		max-height: initial;
+		min-height: 100%;
+		height: auto;
+	}
+
+	#collaboration figure{
+		padding: 45%;
 	}
 }
 
