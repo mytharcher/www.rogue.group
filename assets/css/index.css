@@ -36,7 +36,7 @@ body > section header > h2{
 #home > .container-full{
 	height: 50%;
 	min-height: auto;
-	background: url("../img/index/team.png") no-repeat bottom center;
+	background: url("../img/index/team.jpg") no-repeat bottom center;
 	background-size: contain;
 }
 #home header{
